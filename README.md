@@ -20,7 +20,7 @@ PSC and counter period , MAX Value
 ## Code algorithm :
 Algorithm is so simple:
 
-First start the timer (in this code, Timer 1), --line 10--
+First start the timer (in this code, Timer 1),
 ```
 HAL_TIM_Base_Start(&htim1);
 ```
