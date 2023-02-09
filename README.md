@@ -2,9 +2,9 @@
 ## Intro :
 This project create us-delay with timer
 Made with STM32CubeMX with `STM32CubeIDE Toolchain`
-Selected microcontroller is `STM32F4xx` and HAL library has been used.
+Selected microcontroller is `STM32F4xx` and HAL library has been used. (for other microcontrollers, just repalce library)
 ## Clock configuration :
-Clock configured 168MH with PLL :
+Clock configured 168MHz with PLL (maximum for my microcontroller,you can use any clock-rate):
 
 ![Clock settings](https://user-images.githubusercontent.com/38432834/212073054-0cf6aed0-62a9-4882-9bd9-ee6fa1f3c6c9.PNG)
 
@@ -15,7 +15,9 @@ TIM1 settings:
 
 Just set clock source, internal clock
 
-PSC and counter period , MAX Value
+PSC set at 167 ((Used-Clock/1,000,000)-1) and counter period at maximum Value.
+
+### **attention:** for other Used-Clock, just modify PSC.
 
 ## Code algorithm :
 Algorithm is so simple:
